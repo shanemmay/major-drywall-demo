@@ -14,9 +14,29 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <!-- LUMEN BOOTSTRAP THEME -->
     <link rel="stylesheet" type="text/css" media="screen" href="lumen.css" />
+    <style>
+        legend
+        {
+            text-align: center;
+        }
+        .input-group
+        {
+            padding-top: 1vh;
+            padding-bottom: 1vh;
+            padding-left: 1vw;
+            padding-right: 1vw;
+        }
+        .submit
+        {
+            display: block;
+            margin: auto;
+            margin-bottom: 5vh;
+        }
+    </style>
 </head>
 <body>
     <!-- HERE'S THE LINK https://bootswatch.com/lumen/ -->
+    <!-- nav -->
     <div class="bs-component">
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
             <a class="navbar-brand" href="#">Navbar</a>
@@ -46,5 +66,355 @@
             </div>
         </nav>
     <div id="source-button" class="btn btn-primary btn-xs" style="display: none;">&lt; &gt;</div></div>
+    <!-- form -->
+    <div class="container">
+        <form>
+            <fieldset>
+                <!-- JOB INFO -->
+                <legend>Job Information</legend>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="job-date">Date</label>
+                            <input type="date" class="form-control" id="job-date" aria-describedby="job-date" placeholder="Enter Date">
+                            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                            <label for="job-owner">Owner</label>
+                            <input type="text" class="form-control" id="job-owner" aria-describedby="job-owner" placeholder="Enter Owner">
+                            <label for="contractor">Contractor</label>
+                            <select class="form-control" id="contractor">
+                                <option>Billy Bob</option>
+                                <option>Jane Doe</option>
+                                <option>Numb Nuts</option>
+                                <option>Knuckle Head</option>
+                                <option>Tim Ruff</option>
+                            </select>
+                            <label for="job-job">Job</label>
+                            <input type="text" class="form-control" id="job-job" aria-describedby="job-job" placeholder="Enter job">
+                            <label for="job-phone">Phone</label>
+                            <input type="tel" class="form-control" id="job-phone" aria-describedby="job-phone" placeholder="Enter phone">
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="job-address">Address</label>
+                            <input type="text" class="form-control" id="job-address" aria-describedby="job-address" placeholder="Enter Address">
+                            <label for="job-city">City</label>
+                            <input type="text" class="form-control" id="job-city" aria-describedby="job-city" placeholder="Enter job-city">
+                            <label for="job-lot">Lot</label>
+                            <input type="text" class="form-control" id="job-lot" aria-describedby="job-lot" placeholder="Enter job-lot">
+                            <label for="job-block">Block</label>
+                            <input type="text" class="form-control" id="job-block" aria-describedby="job-block" placeholder="Enter job-block">
+                            <label for="job-sub">Subdivision</label>
+                            <input type="text" class="form-control" id="job-sub" aria-describedby="job-sub" placeholder="Enter job-sub">
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <hr>
+                <!-- BID BILLING INFO -->
+                <legend>Bid & Billing Information</legend>
+                <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="bid-name">Name</label>
+                                <input type="text" class="form-control" id="bid-name" aria-describedby="bid-name" placeholder="Enter name">
+                                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                                <label for="bid-labor">Labor</label>
+                                <input type="text" class="form-control" id="bid-labor" aria-describedby="bid-labor" placeholder="Enter labor">
+                                <label for="bid-materials">Materials</label>
+                                <input type="text" class="form-control" id="bid-materials" aria-describedby="bid-materials" placeholder="Enter materials">
+                                <label for="bid-total">Total</label>
+                                <div class="form-group">
+                                    <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">$</span>
+                                    </div>
+                                        <input type="number" class="form-control" id="bid-total" aria-label="Amount in money">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+    
+                        <div class="col">
+                            <div class="form-group">
+                                    <label for="bid-address">Address</label>
+                                    <input type="text" class="form-control" id="bid-address" aria-describedby="bid-address" placeholder="Enter Address">
+                                    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                                    <label for="bid-city">City</label>
+                                    <input type="text" class="form-control" id="bid-city" aria-describedby="bid-city" placeholder="Enter city">
+                                    <label for="bid-state">State</label>
+                                    <input type="text" class="form-control" id="bid-state" aria-describedby="bid-state" placeholder="Enter state">
+                                    <label for="bid-zip">Zip</label>
+                                    <input type="number" class="form-control" id="bid-zip" aria-describedby="bid-zip" placeholder="Enter zip">
+                                    
+                            </div>
+                        </div>
+                </div>
+                <div class="form-group">
+                    <label for="bid-notes">Bid Notes</label>
+                    <textarea class="form-control" id="bid-notes" rows="3"></textarea>
+                </div>
+
+                <hr>
+
+                <!-- MATERIALS INFORMATION -->
+                <legend>Materials Information</legend>
+                <div class="row">
+                        <div class="col">
+
+                            <label for="bid-total">1/2" Sheetrock</label>
+                            <div class="form-group">
+                                <div class="input-group mb-3">
+                                        <input type="number" class="form-control" id="bid-total" aria-label="Amount in money">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">$</span>
+                                </div>
+                                    <input type="number" class="form-control" id="bid-total" aria-label="Amount in money">
+                                </div>
+                            </div>
+
+                            <label for="bid-total">5/8" Sheetrock</label>
+                            <div class="form-group">
+                                <div class="input-group mb-3">
+                                        <input type="number" class="form-control" id="bid-total" aria-label="Amount in money">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">$</span>
+                                </div>
+                                    <input type="number" class="form-control" id="bid-total" aria-label="Amount in money">
+                                </div>
+                            </div>
+
+                            <label for="bid-total">Square</label>
+                            <div class="form-group">
+                                <div class="input-group mb-3">
+                                        <input type="number" class="form-control" id="bid-total" aria-label="Amount in money">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">$</span>
+                                </div>
+                                    <input type="number" class="form-control" id="bid-total" aria-label="Amount in money">
+                                </div>
+                            </div>
+
+                            <label for="bid-total">Bullnose</label>
+                            <div class="form-group">
+                                <div class="input-group mb-3">
+                                        <input type="number" class="form-control" id="bid-total" aria-label="Amount in money">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">$</span>
+                                </div>
+                                    <input type="number" class="form-control" id="bid-total" aria-label="Amount in money">
+                                </div>
+                            </div>
+
+                            <label for="bid-total">Masking Tape</label>
+                            <div class="form-group">
+                                <div class="input-group mb-3">
+                                        <input type="number" class="form-control" id="bid-total" aria-label="Amount in money">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">$</span>
+                                </div>
+                                    <input type="number" class="form-control" id="bid-total" aria-label="Amount in money">
+                                </div>
+                            </div>
+
+                            <label for="bid-total">Plastic</label>
+                            <div class="form-group">
+                                <div class="input-group mb-3">
+                                        <input type="number" class="form-control" id="bid-total" aria-label="Amount in money">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">$</span>
+                                </div>
+                                    <input type="number" class="form-control" id="bid-total" aria-label="Amount in money">
+                                </div>
+                            </div>
+
+                            <label for="bid-total">Fixall</label>
+                            <div class="form-group">
+                                <div class="input-group mb-3">
+                                        <input type="number" class="form-control" id="bid-total" aria-label="Amount in money">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">$</span>
+                                </div>
+                                    <input type="number" class="form-control" id="bid-total" aria-label="Amount in money">
+                                </div>
+                            </div>
+
+                            <label for="bid-total">Mesh/Paper Tape</label>
+                            <div class="form-group">
+                                <div class="input-group mb-3">
+                                        <input type="number" class="form-control" id="bid-total" aria-label="Amount in money">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">$</span>
+                                </div>
+                                    <input type="number" class="form-control" id="bid-total" aria-label="Amount in money">
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col">
+                            <div class="form-group">
+                                    <label for="bid-total">Mud</label>
+                                    <div class="form-group">
+                                        <div class="input-group mb-3">
+                                                <input type="number" class="form-control" id="bid-total" aria-label="Amount in money">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">$</span>
+                                        </div>
+                                            <input type="number" class="form-control" id="bid-total" aria-label="Amount in money">
+                                        </div>
+                                    </div>
+        
+                                    <label for="bid-total">Other</label>
+                                    <div class="form-group">
+                                        <div class="input-group mb-3">
+                                                <input type="text" class="form-control" id="bid-total" aria-label="Amount in money">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">$</span>
+                                        </div>
+                                            <input type="number" class="form-control" id="bid-total" aria-label="Amount in money">
+                                        </div>
+                                    </div>
+        
+                                    <label for="bid-total">Miscollaneous</label>
+                                    <div class="form-group">
+                                        <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">$</span>
+                                        </div>
+                                            <input type="number" class="form-control" id="bid-total" aria-label="Amount in money">
+                                        </div>
+                                    </div>
+        
+                                    <label for="bid-total">Shop Fee</label>
+                                    <div class="form-group">
+                                        <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">$</span>
+                                        </div>
+                                            <input type="number" class="form-control" id="bid-total" aria-label="Amount in money">
+                                        </div>
+                                    </div>
+        
+                                    <label for="bid-total">Total Hours</label>
+                                    <div class="form-group">
+                                        <div class="input-group mb-3">
+                                            <input type="number" class="form-control" id="bid-total" aria-label="Amount in money">
+                                        </div>
+                                    </div>
+        
+                                    <label for="bid-total">Builder Percent</label>
+                                    <div class="form-group">
+                                        <div class="input-group mb-3">
+                                                <input type="number" class="form-control" id="bid-total" aria-label="Amount in money">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">$</span>
+                                        </div>
+                                            <input type="number" class="form-control" id="bid-total" aria-label="Amount in money">
+                                        </div>
+                                    </div>
+
+                                    <label for="bid-total">Drywall Contractor Percent</label>
+                                    <div class="form-group">
+                                        <div class="input-group mb-3">
+                                                <input type="number" class="form-control" id="bid-total" aria-label="Amount in money">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">$</span>
+                                        </div>
+                                            <input type="number" class="form-control" id="bid-total" aria-label="Amount in money">
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                </div>
+                <div class="form-group">
+                    <label for="notes">Notes</label>
+                    <textarea class="form-control" id="notes" rows="3"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary submit">Submit</button>
+
+
+
+
+
+
+
+
+<!-- 
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                <div class="form-group">
+                <label for="exampleSelect1">Example select</label>
+                <select class="form-control" id="exampleSelect1">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+                </div>
+                <div class="form-group">
+                <label for="exampleSelect2">Example multiple select</label>
+                <select multiple="" class="form-control" id="exampleSelect2">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+                </div>
+                
+                <div class="form-group">
+                <label for="exampleInputFile">File input</label>
+                <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+                <small id="fileHelp" class="form-text text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
+                </div>
+                <fieldset class="form-group">
+                <legend>Radio buttons</legend>
+                <div class="form-check">
+                    <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
+                    Option one is this and that—be sure to include why it's great
+                    </label>
+                </div>
+                <div class="form-check">
+                <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
+                    Option two can be something else and selecting it will deselect option one
+                    </label>
+                </div>
+                <div class="form-check disabled">
+                <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3" disabled="">
+                    Option three is disabled
+                    </label>
+                </div>
+                </fieldset>
+                <fieldset class="form-group">
+                <legend>Checkboxes</legend>
+                <div class="form-check">
+                    <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" value="" checked="">
+                    Option one is this and that—be sure to include why it's great
+                    </label>
+                </div>
+                <div class="form-check disabled">
+                    <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" value="" disabled="">
+                    Option two is disabled
+                    </label>
+                </div>
+                </fieldset>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </fieldset>
+        </form>
+    </div> -->
 </body>
 </html>
